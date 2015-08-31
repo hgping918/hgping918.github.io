@@ -67,6 +67,168 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JMeter插件和工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/28/JMeter插件和工具/" class="article-date">
+  <time datetime="2015-08-28T01:32:54.000Z" itemprop="datePublished">2015-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/28/JMeter插件和工具/">JMeter插件和工具</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、JMeter监控内存和CPU的工具—jconsole">一、JMeter监控内存和CPU的工具—jconsole</h2><ul>
+<li><p>jconsole运行环境。<br>配置好JMeter运行环境，即可使用 jconsole工具。【<a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external">JMeter下载地址</a>】</p>
+</li>
+<li><p>jconsole运行步骤。<br>点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。</p>
+</li>
+<li><p>jconsole本地测试。<br>在java监视和管理控制台 → 默认“本地进程” → 点击“sun.tools.jconsole.JConsloe” → 点击“连接”后进入监控界面（见图1）。</p>
+</li>
+<li><p>jconsole远程测试。<br>在java监视和管理控制台 → 勾选“远程进程”输入远程服务器的IP地址:端口 → 再输入远程服务器的用户名和密码 → 点击“连接”可进入监控界面。</p>
+<p>注：若点击“连接”时弹出“安全连接失败。是否以不安全的方式重试？”提示，点击“不安全”即可连接进入监控界面。</p>
+<p><a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external"><img src="/images/jconsole.jpg" alt="" title="Download Apache JMeter"></a></p>
+</li>
+</ul>
+<p align="center">图1 Java监视和管理控制台</p>
+
+
+<h2 id="二、JMeter监控内存和CUP的插件—JMeterPlugins">二、JMeter监控内存和CUP的插件—<a href="http://www.jmeter-plugins.org/" target="_blank" rel="external">JMeterPlugins</a></h2><p>  JMeter对于内存和CPU的监控存在不足，通过系统的资源监控器来观察，一闪而过又不会记录下来，不便于查阅和对比。Google开发了一款专门用于监控的JMeter插件—JMeterPlugins，弥补了JMeter这方面的不足。【以Windows为例介绍JMeter-Plugins】</p>
+<ul>
+<li><p>JMeterPlugins的下载<br>当前最新版本：JMeterPlugins-Standard-1.3.0.zip(标准版)<br>插件下载地址：<a href="http://www.jmeter-plugins.org/downloads/all/" target="_blank" rel="external">http://www.jmeter-plugins.org/downloads/all/</a></p>
+</li>
+<li><p>JMeterPlugins的配置<br>解压JMeterPlugins-Standard-1.3.0.zip,仅将解压包lib\ext\目录下的JMeterPlugins-Standard.jar复制到JMeter的bin\ext\目录下；</p>
+</li>
+<li><p>JMeterPlugins的使用<br>启动JMeter：双击jmeter.bat → 添加(add) → 线程组、定时器、前后处理器、监听器都相应增添有“jp@pc”开头的文件。<br>添加监控内存监听器：添加(add) → 监听器(listener) → “jp@pc - PerfMon Metrics Collector”。<br>运行ServerAgent中ServerAgent.bat<br>监控内存需要使用监听器中：“jp@gc - PerfMon Metrics Collector”。</p>
+</li>
+</ul>
+<p>—未完待续</p>
+<hr>
+<h3 id="参考文献">参考文献</h3><p><a href="http://www.51testing.com/html/11/n-854111-3.html" target="_blank" rel="external">JMeter Tutorial的安装和具体操作</a><br><a href="http://blog.csdn.net/lzqinfen/article/details/37873025" target="_blank" rel="external">Jmeter—google plugin插件监控被测系统资源方法</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cidzoq4x6000ktco0jvz12oj2" class="article-share-link">Share</a>
+      
+        <a href="http://blog.hgping.com/2015/08/28/JMeter插件和工具/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
+    <article id="post-Web界面边界输入测试" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/27/Web界面边界输入测试/" class="article-date">
+  <time datetime="2015-08-27T05:46:49.000Z" itemprop="datePublished">2015-08-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/测试/">测试</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/27/Web界面边界输入测试/">Web界面输入边界异常测试</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　一个B/C架构模式的Web项目，除了对增、删、改、查等功能性的测试外，还必须考虑输入边界异常测试，以保证产品或软件自身的健壮性和容错性。输入边界异常测试的重点是关注实际应用场景，用于检验Web界面（前台）是否对输入框做相应异常校验。输入边界测试参考范围值是根据实际情况而定，或由设计、开发、测试人员事先协商约定。</p>
+<p>　　接下来就简单介绍几个输入边界测试实例：
+　　</p>
+<h4 id="示例1：用户管理">示例1：用户管理</h4><table>
+<thead>
+<tr>
+<th>用户管理</th>
+<th>场景</th>
+<th>正常值</th>
+<th>边界测试</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>账号</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>密码</td>
+</tr>
+<tr>
+<td>确认密码</td>
+</tr>
+<tr>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>电话</td>
+</tr>
+<tr>
+<td>微信/QQ</td>
+</tr>
+</tbody>
+</table>
+<p>注释：诸多网站注册用户名支持手机、邮箱、用户名注册，则需要考虑手机格式和邮箱格式的用户名</p>
+<h4 id="账号/帐号/用户名">账号/帐号/用户名</h4><p>【场景】<br>　支持手机、邮箱、自定义注册（仅介绍自定义）<br>【自定义约定】<br>　字符格式：仅支持中文、英文、数字、_<br>　字符长度：4~12个字节<br>　字符内容：非空、不可重复、不予存在空格<br>【正确值】<br>　如：你好、你好我好他好、ABab、ABCDEabcde、1234567890、_你ADCabc1<br>【边界异常测试】<br>　字符格式：한국어(韩语)、Русский язык(俄语)、あき(日语字母)、I IV V(罗马数字)、全角格式的英文数字字符、<br>　　　　　　除下划线外的特殊字符：~ ! @ # ￥ $ % …… &amp; * ( ) [ ] { } | \ “ ‘ —— + 等等<br>　　　　　　<em>写了很多感觉有点夸张，主要是体现边界测试异常点之多，实际测试考虑到成本几乎没谁会这样测试的</em><br>　字符长度：少于4字节、多于12字节<br>　字符内容：为空、账号已被注册、存在空格</p>
+<h4 id="密码">密码</h4><p>【场景】<br>　非银行取款密码<br>【密码约定】<br>　字符格式：仅支持英文字符(区分大小)、数字、彼此组合<br>　字符长度：6~18位<br>　<em>特例：银行卡取款密码有且只有6位、某些网银密码必须为字母+数字、手机卡号密码不予设置简单密码123456等</em><br>【正确值】<br>　如：123456、123456789012345678、abcdef、abcdefghijlmnlopqr、ABCDEF、ABCDEFGHIJKMLNOPQR、abc123、abcABC、ABC123、abCD12<br>【边界异常测试】<br>　字符格式：12ABC你好、_12ABCabc、<br>　字符长度：少于6位、多于18位<br>　字符内容：为空、包含空格
+　</p>
+<p>示例2：个人信息<br>姓名：<br>身份证：<br>年龄：<br>学历：<br>爱好：<br>身高：<br>体重：</p>
+<p>示例3: IP<br>通信IP：<br>网关：<br>子网掩码：<br>DNS：</p>
+<p>示例4: 搜索</p>
+<hr>
+<p>个人经验，仅供参考，欢迎吐槽。<br><img src="/images/918_20.gif" style="text-align: right; margin-right: 50px"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cidzoq4x4000itco06e58unb7" class="article-share-link">Share</a>
+      
+        <a href="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-高效能人士的七个习惯" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/08/19/高效能人士的七个习惯/" class="article-date">
@@ -106,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/" data-id="cidixa5gw0003qso06rgagdiv" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/" data-id="cidzoq4wj0003tco07gqe1sh8" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -148,46 +310,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>情景一：在繁华的商业街道附近有一家好吃的小面馆，不知道厨师咋了，刚刚几个客人点的面条都忘记了加盐。<br>屌丝甲：老板加点盐，今天的面好像没放盐，咋回事儿？<br>路人乙：随便给我来点。<br>大　师：服务员加点盐，我个人口味比较重。</p>
-<p>情景二：在电梯门口碰巧遇到公司同事，几个妹子都买面包牛奶当早餐，看见有买肉夹馍（很香、很好吃）的同事。<br>妹子甲：好像吃肉夹馍。<br>妹子乙：要不和他们还。<br>屌　丝：吃肉夹馍容易长胖，不能减肥。（妹子一脸黑线）<br>大　师：吃肉夹馍不利于减肥。<br><img src="/images/918_20.gif" style="text-align: right; margin-right: 50px"></p>
+        <p>情景一：在繁华的商业街道附近有一家好吃的小面馆，不知道厨师咋了，刚刚几个客人点的面条都忘记了加盐。<br>屌丝：老板加点盐，今天的面好像没放盐，咋回事儿？<br>路人：随便给我来点。<br>商务：服务员加点盐，我个人口味比较重。</p>
+<p>情景二：在电梯门口碰巧遇到公司同事，几个妹子都买面包牛奶当早餐，看见有买肉夹馍（很香、很好吃）的同事。<br>妹子甲：好像吃肉夹馍。<br>妹子乙：要不和他们还。<br>屌　丝：吃肉夹馍容易长胖，不能减肥。（妹子一脸黑线）<br>路　人：吃肉夹馍不利于瘦身。<br><img src="/images/918_20.gif" style="text-align: right; margin-right: 50px"></p>
 <hr>
-<h3 id="你若是大师，你会怎么说。">你若是大师，你会怎么说。</h3>
+<h3 id="你若遇见，你会怎么说。">你若遇见，你会怎么说。</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cidixa5hc000cqso00virb0hr" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cidzoq4wy000ctco0zl2aesa2" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/杂谈/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-New Document" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/18/New Document/" class="article-date">
-  <time datetime="2015-08-18T08:09:17.868Z" itemprop="datePublished">2015-08-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="hello_word">hello word</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/18/New Document/" data-id="cidixa5hi000iqso00ywdugii" class="article-share-link">Share</a>
-      
-        <a href="http://blog.hgping.com/2015/08/18/New Document/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -230,53 +362,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="cidixa5h90009qso0bowhns77" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="cidzoq4wv0009tco0f884ow5i" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/10/1/" class="article-date">
-  <time datetime="2015-08-10T06:45:33.107Z" itemprop="datePublished">2015-08-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.概述</p>
-<p>   1.1 编写目的</p>
-<p>   编写测试总结报告，主要是总局测试工作。</p>
-<p> 1.2 项目背景</p>
-<p>   对项目目标和目的进行简要说明。</p>
-<p>1.3 系统简介</p>
-<p>1.4 术语和缩写词</p>
-<p>  对整个测试过程中所使用的术语做出标准的定义，让项目的相关者很容易地理解测试过程中所使用的术语，便于查阅。</p>
-<p> 1.5 测试工具</p>
-<p> 1.6 参考资料</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/08/10/1/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/10/1/" data-id="cidixa5hk000jqso08da8480k" class="article-share-link">Share</a>
-      
-        <a href="http://blog.hgping.com/2015/08/10/1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -301,7 +389,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/七嘴八舌/">七嘴八舌</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/七嘴八舌/">七嘴八舌</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -340,6 +428,14 @@
       <ul>
         
           <li>
+            <a href="/2015/08/28/JMeter插件和工具/">JMeter插件和工具</a>
+          </li>
+        
+          <li>
+            <a href="/2015/08/27/Web界面边界输入测试/">Web界面输入边界异常测试</a>
+          </li>
+        
+          <li>
             <a href="/2015/08/19/高效能人士的七个习惯/">《高效能人士的七个习惯》</a>
           </li>
         
@@ -348,15 +444,7 @@
           </li>
         
           <li>
-            <a href="/2015/08/18/New Document/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2015/08/13/测试人员基本自我要求/">测试人员基本自我要求</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/10/1/">(no title)</a>
           </li>
         
       </ul>
