@@ -6,31 +6,32 @@
   <title>JMeter插件和工具 | HGPing&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、JMeter监控内存和CPU的工具—jconsole
-jconsole运行环境。配置好JMeter运行环境，即可使用 jconsole工具。【JMeter下载地址】
+jconsole运行环境配置好JMeter运行环境，即可使用 jconsole工具。【JMeter下载地址】
 
-jconsole运行步骤。点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。
+jconsole运行步骤点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。
 
-jconsole本地测试。在java监视和管理控制台 → 默认“">
+jconsole本地测试在java监视和管理控制台 → 勾选“本地进">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JMeter插件和工具">
 <meta property="og:url" content="http://blog.hgping.com/2015/08/28/JMeter插件和工具/index.html">
 <meta property="og:site_name" content="HGPing's Blog">
 <meta property="og:description" content="一、JMeter监控内存和CPU的工具—jconsole
-jconsole运行环境。配置好JMeter运行环境，即可使用 jconsole工具。【JMeter下载地址】
+jconsole运行环境配置好JMeter运行环境，即可使用 jconsole工具。【JMeter下载地址】
 
-jconsole运行步骤。点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。
+jconsole运行步骤点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。
 
-jconsole本地测试。在java监视和管理控制台 → 默认“">
-<meta property="og:image" content="http://blog.hgping.com/images/jconsole.jpg">
-<meta property="og:updated_time" content="2015-08-31T08:49:02.154Z">
+jconsole本地测试在java监视和管理控制台 → 勾选“本地进">
+<meta property="og:image" content="http://blog.hgping.com/images/jconsole_console.jpg">
+<meta property="og:image" content="http://blog.hgping.com/images/jconsole_lj.jpg">
+<meta property="og:updated_time" content="2015-08-31T09:08:33.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JMeter插件和工具">
 <meta name="twitter:description" content="一、JMeter监控内存和CPU的工具—jconsole
-jconsole运行环境。配置好JMeter运行环境，即可使用 jconsole工具。【JMeter下载地址】
+jconsole运行环境配置好JMeter运行环境，即可使用 jconsole工具。【JMeter下载地址】
 
-jconsole运行步骤。点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。
+jconsole运行步骤点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。
 
-jconsole本地测试。在java监视和管理控制台 → 默认“">
+jconsole本地测试在java监视和管理控制台 → 勾选“本地进">
   
     <link rel="alternative" href="/atom.xml" title="HGPing&#39;s Blog" type="application/atom+xml">
   
@@ -108,21 +109,21 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、JMeter监控内存和CPU的工具—jconsole">一、JMeter监控内存和CPU的工具—jconsole</h2><ul>
-<li><p>jconsole运行环境。<br>配置好JMeter运行环境，即可使用 jconsole工具。【<a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external">JMeter下载地址</a>】</p>
+        <h2 id="一、JMeter监控内存和CPU的工具—jconsole">一、JMeter监控内存和CPU的工具—jconsole</h2><ol>
+<li><p>jconsole运行环境<br>配置好JMeter运行环境，即可使用 jconsole工具。【<a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external">JMeter下载地址</a>】</p>
 </li>
-<li><p>jconsole运行步骤。<br>点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。</p>
+<li><p>jconsole运行步骤<br>点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。</p>
 </li>
-<li><p>jconsole本地测试。<br>在java监视和管理控制台 → 默认“本地进程” → 点击“sun.tools.jconsole.JConsloe” → 点击“连接”后进入监控界面（见图1）。</p>
-</li>
-<li><p>jconsole远程测试。<br>在java监视和管理控制台 → 勾选“远程进程”输入远程服务器的IP地址:端口 → 再输入远程服务器的用户名和密码 → 点击“连接”可进入监控界面。</p>
-<p>注：若点击“连接”时弹出“安全连接失败。是否以不安全的方式重试？”提示，点击“不安全”即可连接进入监控界面。</p>
-<p><a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external"><img src="/images/jconsole.jpg" alt="" title="Download Apache JMeter"></a></p>
-</li>
-</ul>
+<li><p>jconsole本地测试<br>在java监视和管理控制台 → 勾选“本地进程” → 点击“sun.tools.jconsole.JConsloe” → 点击“连接”后进入监控界面（见图1）。<br><img src="/images/jconsole_console.jpg" alt="" title="Java监视和管理控制台"></p>
 <p align="center">图1 Java监视和管理控制台</p>
+</li>
+<li><p>jconsole远程测试<br>在java监视和管理控制台 → 勾选“远程进程”输入远程服务器的用法（见图2） → 再输入远程服务器的用户名和密码 → 点击“连接”可进入监控界面。<br><img src="/images/jconsole_lj.jpg" alt="" title="Jconsole新建连接"></p>
+<p align="center">图2 Jconsole新建连接</p>
 
-
+<p>注：若点击“连接”时弹出“安全连接失败，是否以不安全的方式重试？”提示，点击“不安全”即可连接进入监控界面。</p>
+</li>
+</ol>
+<p>　</p>
 <h2 id="二、JMeter监控内存和CUP的插件—JMeterPlugins">二、JMeter监控内存和CUP的插件—<a href="http://www.jmeter-plugins.org/" target="_blank" rel="external">JMeterPlugins</a></h2><p>  JMeter对于内存和CPU的监控存在不足，通过系统的资源监控器来观察，一闪而过又不会记录下来，不便于查阅和对比。Google开发了一款专门用于监控的JMeter插件—JMeterPlugins，弥补了JMeter这方面的不足。【以Windows为例介绍JMeter-Plugins】</p>
 <ul>
 <li><p>JMeterPlugins的下载<br>当前最新版本：JMeterPlugins-Standard-1.3.0.zip(标准版)<br>插件下载地址：<a href="http://www.jmeter-plugins.org/downloads/all/" target="_blank" rel="external">http://www.jmeter-plugins.org/downloads/all/</a></p>
@@ -139,7 +140,7 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cidzoq4x6000ktco0jvz12oj2" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cie0yht6x000keco0csoccyql" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/28/JMeter插件和工具/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -149,6 +150,15 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux系统环境安装手册
+        
+      </div>
+    </a>
   
   
     <a href="/2015/08/27/Web界面边界输入测试/" id="article-nav-older" class="article-nav-link-wrap">
@@ -191,7 +201,7 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/七嘴八舌/">七嘴八舌</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/七嘴八舌/">七嘴八舌</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -218,7 +228,7 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
   <div class="widget-wrap">
     <h3 class="widget-title">档案</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -228,6 +238,10 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
     <h3 class="widget-title">最近</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux系统环境安装手册</a>
+          </li>
         
           <li>
             <a href="/2015/08/28/JMeter插件和工具/">JMeter插件和工具</a>
@@ -243,10 +257,6 @@ jconsole本地测试。在java监视和管理控制台 → 默认“">
         
           <li>
             <a href="/2015/08/19/杂谈/">杂谈</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/13/测试人员基本自我要求/">测试人员基本自我要求</a>
           </li>
         
       </ul>

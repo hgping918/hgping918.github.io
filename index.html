@@ -67,6 +67,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2015-9-1-liunx系统环境安装手册" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/" class="article-date">
+  <time datetime="2015-09-01T06:10:09.000Z" itemprop="datePublished">2015-09-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux系统环境安装手册</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Linux系统软件安装方法yum和rpm">Linux系统软件安装方法yum和rpm</h2><ol>
+<li><p>yum和rpm的安装区别<br>yum 是网络安装(依赖互联网环境)；从<a href="http://www.ming4.com/news/2792.html">「源」</a>上下载安装包，若存在依赖关系自动下载依赖包并安装。<br>rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。</p>
+</li>
+<li><p>yum和rpm的基本安装过程（Java为例）</p>
+<ul>
+<li><a href="http://man.linuxde.net/yum">「yum命令」</a>安装的基本过程<br>1) 查看系统是否已安装java；<br>2) 若已安装的java不合期望则将其卸载；<br>3) 查看yum库中可安装的java rpm安装包；<br>4) 选择适合的java rpm包进行安装；<br>5) 检查java版本信息确保安装成功。<pre><code>[root<span class="property">@localhost</span> ~]<span class="comment"># ping www.baidu.com         # 检查网络是否正常连通</span>
+[root<span class="property">@localhost</span> ~]<span class="comment"># yum list installed java*   # 查看资源库中已经安装的java rpm包</span>
+[root<span class="property">@localhost</span> ~]<span class="comment"># yum -y remove java*        #卸载；参数-y：当需要判断输入[Y/N]时默认为Y，无需输入</span>
+[root<span class="property">@localhost</span> ~]<span class="comment"># yum list java*             # 查看资源库中可以安装的java rpm包</span>
+[root<span class="property">@localhost</span> ~]<span class="comment"># yum -y install java-1.7.0-openjdk*   # 当显示"Complete!"时即安装完毕</span>
+[root<span class="property">@localhost</span> ~]<span class="comment"># java -version                        # 查看当前java版本</span>
+</code></pre>
+        
+          <p class="article-more-link">
+            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/" data-id="cie0yht71000neco0a1w7iwcm" class="article-share-link">Share</a>
+      
+        <a href="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+  
     <article id="post-JMeter插件和工具" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/08/28/JMeter插件和工具/" class="article-date">
@@ -93,21 +153,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、JMeter监控内存和CPU的工具—jconsole">一、JMeter监控内存和CPU的工具—jconsole</h2><ul>
-<li><p>jconsole运行环境。<br>配置好JMeter运行环境，即可使用 jconsole工具。【<a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external">JMeter下载地址</a>】</p>
+        <h2 id="一、JMeter监控内存和CPU的工具—jconsole">一、JMeter监控内存和CPU的工具—jconsole</h2><ol>
+<li><p>jconsole运行环境<br>配置好JMeter运行环境，即可使用 jconsole工具。【<a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external">JMeter下载地址</a>】</p>
 </li>
-<li><p>jconsole运行步骤。<br>点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。</p>
+<li><p>jconsole运行步骤<br>点击：Windows开始 → 运行 → 输入cmd → 命令提示符中输入jconsole并回车 → 弹出“java监视和管理控制台”。</p>
 </li>
-<li><p>jconsole本地测试。<br>在java监视和管理控制台 → 默认“本地进程” → 点击“sun.tools.jconsole.JConsloe” → 点击“连接”后进入监控界面（见图1）。</p>
-</li>
-<li><p>jconsole远程测试。<br>在java监视和管理控制台 → 勾选“远程进程”输入远程服务器的IP地址:端口 → 再输入远程服务器的用户名和密码 → 点击“连接”可进入监控界面。</p>
-<p>注：若点击“连接”时弹出“安全连接失败。是否以不安全的方式重试？”提示，点击“不安全”即可连接进入监控界面。</p>
-<p><a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="external"><img src="/images/jconsole.jpg" alt="" title="Download Apache JMeter"></a></p>
-</li>
-</ul>
+<li><p>jconsole本地测试<br>在java监视和管理控制台 → 勾选“本地进程” → 点击“sun.tools.jconsole.JConsloe” → 点击“连接”后进入监控界面（见图1）。<br><img src="/images/jconsole_console.jpg" alt="" title="Java监视和管理控制台"></p>
 <p align="center">图1 Java监视和管理控制台</p>
+</li>
+<li><p>jconsole远程测试<br>在java监视和管理控制台 → 勾选“远程进程”输入远程服务器的用法（见图2） → 再输入远程服务器的用户名和密码 → 点击“连接”可进入监控界面。<br><img src="/images/jconsole_lj.jpg" alt="" title="Jconsole新建连接"></p>
+<p align="center">图2 Jconsole新建连接</p>
 
-
+<p>注：若点击“连接”时弹出“安全连接失败，是否以不安全的方式重试？”提示，点击“不安全”即可连接进入监控界面。</p>
+</li>
+</ol>
+<p>　</p>
 <h2 id="二、JMeter监控内存和CUP的插件—JMeterPlugins">二、JMeter监控内存和CUP的插件—<a href="http://www.jmeter-plugins.org/" target="_blank" rel="external">JMeterPlugins</a></h2><p>  JMeter对于内存和CPU的监控存在不足，通过系统的资源监控器来观察，一闪而过又不会记录下来，不便于查阅和对比。Google开发了一款专门用于监控的JMeter插件—JMeterPlugins，弥补了JMeter这方面的不足。【以Windows为例介绍JMeter-Plugins】</p>
 <ul>
 <li><p>JMeterPlugins的下载<br>当前最新版本：JMeterPlugins-Standard-1.3.0.zip(标准版)<br>插件下载地址：<a href="http://www.jmeter-plugins.org/downloads/all/" target="_blank" rel="external">http://www.jmeter-plugins.org/downloads/all/</a></p>
@@ -124,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cidzoq4x6000ktco0jvz12oj2" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cie0yht6x000keco0csoccyql" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/28/JMeter插件和工具/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -215,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cidzoq4x4000itco06e58unb7" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cie0yht6t000ieco0h9w6bis8" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -268,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/" data-id="cidzoq4wj0003tco07gqe1sh8" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/" data-id="cie0yht620003eco0e7ylbr06" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -317,54 +377,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cidzoq4wy000ctco0zl2aesa2" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cie0yht6n000ceco0je5beist" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/杂谈/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
-    <article id="post-测试人员基本自我要求" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/13/测试人员基本自我要求/" class="article-date">
-  <time datetime="2015-08-13T02:25:43.000Z" itemprop="datePublished">2015-08-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/测试/">测试</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/13/测试人员基本自我要求/">测试人员基本自我要求</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、制定测试计划、设计测试用例、执行测试用例、编写测试报告；跟踪bug，协助开发重现或定位Bug。 ok<br>2、熟悉测试流程和开发模式。根据开发模式制定适合的测试流程和方法。<br>3、熟练使用测试工具，如：JMeter<br>4、搭建测试环境和管理工具，如：安装部署liunx系统、搭建部署管理工具：Mantis+TestLink、bugfree等<br>5、熟悉liunx操作系统<br>6、熟悉数据库，如：mysql<br>7、会一种测试脚本语言，如：python、php、ruby、shell脚本<br>8、性能调优测试、高并发测试等。<br>9、提示测试基础知识，如测试常识可参见测试面试问题。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="cidzoq4wv0009tco0f884ow5i" class="article-share-link">Share</a>
-      
-        <a href="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -389,7 +404,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/七嘴八舌/">七嘴八舌</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/七嘴八舌/">七嘴八舌</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -416,7 +431,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">档案</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -426,6 +441,10 @@
     <h3 class="widget-title">最近</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux系统环境安装手册</a>
+          </li>
         
           <li>
             <a href="/2015/08/28/JMeter插件和工具/">JMeter插件和工具</a>
@@ -441,10 +460,6 @@
         
           <li>
             <a href="/2015/08/19/杂谈/">杂谈</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/13/测试人员基本自我要求/">测试人员基本自我要求</a>
           </li>
         
       </ul>
