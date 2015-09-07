@@ -3,33 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Linux系统环境安装手册 | HGPing&#39;s Blog</title>
+  <title>Linux软件安装和常用工具介绍 | HGPing&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Linux系统软件安装方法yum和rpm
 yum和rpm的安装区别yum 是网络安装(依赖互联网环境)；从「源」上下载安装包，若存在依赖关系自动下载依赖包并安装。rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。
-
 yum和rpm的基本安装过程（Java为例）
-
-「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若">
+「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若已安">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux系统环境安装手册">
+<meta property="og:title" content="Linux软件安装和常用工具介绍">
 <meta property="og:url" content="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/index.html">
 <meta property="og:site_name" content="HGPing's Blog">
 <meta property="og:description" content="Linux系统软件安装方法yum和rpm
 yum和rpm的安装区别yum 是网络安装(依赖互联网环境)；从「源」上下载安装包，若存在依赖关系自动下载依赖包并安装。rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。
-
 yum和rpm的基本安装过程（Java为例）
-
-「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若">
-<meta property="og:updated_time" content="2015-09-06T08:53:37.437Z">
+「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若已安">
+<meta property="og:updated_time" content="2015-09-07T06:46:36.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux系统环境安装手册">
+<meta name="twitter:title" content="Linux软件安装和常用工具介绍">
 <meta name="twitter:description" content="Linux系统软件安装方法yum和rpm
 yum和rpm的安装区别yum 是网络安装(依赖互联网环境)；从「源」上下载安装包，若存在依赖关系自动下载依赖包并安装。rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。
-
 yum和rpm的基本安装过程（Java为例）
-
-「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若">
+「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若已安">
   
     <link rel="alternative" href="/atom.xml" title="HGPing&#39;s Blog" type="application/atom+xml">
   
@@ -99,7 +93,7 @@ yum和rpm的基本安装过程（Java为例）
         
   
     <h1 class="article-title" itemprop="name">
-      Linux系统环境安装手册
+      Linux软件安装和常用工具介绍
     </h1>
   
 
@@ -107,53 +101,56 @@ yum和rpm的基本安装过程（Java为例）
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Linux系统软件安装方法yum和rpm">Linux系统软件安装方法yum和rpm</h2><ol>
-<li><p>yum和rpm的安装区别<br>yum 是网络安装(依赖互联网环境)；从<a href="http://www.ming4.com/news/2792.html" target="_blank" rel="external">「源」</a>上下载安装包，若存在依赖关系自动下载依赖包并安装。<br>rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。</p>
-</li>
-<li><p>yum和rpm的基本安装过程（Java为例）</p>
-<ul>
+        <h3 id="Linux系统软件安装方法yum和rpm">Linux系统软件安装方法yum和rpm</h3><ol>
+<li>yum和rpm的安装区别<br>yum 是网络安装(依赖互联网环境)；从<a href="http://www.ming4.com/news/2792.html" target="_blank" rel="external">「源」</a>上下载安装包，若存在依赖关系自动下载依赖包并安装。<br>rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。<br><br></li>
+<li>yum和rpm的基本安装过程（Java为例）<ul>
 <li><a href="http://man.linuxde.net/yum" target="_blank" rel="external">「yum命令」</a>安装的基本过程<br>1) 查看系统是否已安装java；<br>2) 若已安装的java不合期望则将其卸载；<br>3) 查看yum库中可安装的java rpm安装包；<br>4) 选择适合的java rpm包进行安装；<br>5) 检查java版本信息确保安装成功。<pre><code>[root<span class="property">@localhost</span> ~]<span class="comment"># ping www.baidu.com         # 检查网络是否正常连通</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># yum list installed java*   # 查看资源库中已经安装的java rpm包</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># yum -y remove java*        #卸载；参数-y：当需要判断输入[Y/N]时默认为Y，无需输入</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># yum list java*             # 查看资源库中可以安装的java rpm包</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># yum -y install java-1.7.0-openjdk*   # 当显示"Complete!"时即安装完毕</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># java -version                        # 查看当前java版本</span>
-</code></pre><a id="more"></a></li>
-<li><a href="http://man.linuxde.net/rpm" target="_blank" rel="external">「rpm命令」</a>安装的基本过程<br>1) 查看系统是否已安装java；<br>2) 若已安装的java不合期望则将其卸载；<br>3) download或copy适合自己的java rpm安装包；<br>4) 选择适合的java rpm包进行安装；<br>5) 检查java版本信息确保安装成功。<br>注：可用“rpm -qa | grep java | <a href="http://linux.51yip.com/search/xargs" target="_blank" rel="external">xargs</a> rpm -e - -nodeps”命令将java相关文件一次性全部卸载，“- -nodeps”忽略依赖关系。<pre><code>[root<span class="property">@localhost</span> ~]<span class="comment"># rpm -qa | grep java               # 查看是否已安装java</span>
+</code></pre><a id="more"></a>
+<br></li>
+<li><a href="http://man.linuxde.net/rpm" target="_blank" rel="external">「rpm命令」</a>安装的基本过程<br>1) 查看系统是否已安装java；<br>2) 若已安装的java不合期望则将其卸载；<br>3) download或copy适合自己的java rpm安装包；<br>4) 选择适合的java rpm包进行安装；<br>5) 检查java版本信息确保安装成功。<br>注：可用”rpm -qa | grep java | <a href="http://linux.51yip.com/search/xargs" target="_blank" rel="external">xargs</a> rpm -e —nodeps”命令将java相关文件一次性全部卸载，<code>--nodeps</code>忽略依赖关系。<pre><code>[root<span class="property">@localhost</span> ~]<span class="comment"># rpm -qa | grep java               # 查看是否已安装java</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># rpm -e java-1.7.0-<span class="doctag"><span class="keyword">xxx</span>.</span>..          # 卸载；rpm -e卸载不支持通配符，卸载对象名称必须完整输入</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># wget -c http://download.../../../jdk-8u60-linux-x64.rpm  # 使用wget工具在线下载jdk安装包</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># smbclient //ip地址/共享文件夹 -U username%password         # 使用samba工具通过共享文件夹拷贝所需jdk安装包</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># rpm -ivh jdk-8u60-linux-x64.rpm   # 安装java rpm安装包，-ivh显示安装进度</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># java -version                     # 查看当前java版本</span>
-</code></pre></li>
+</code></pre><br></li>
 </ul>
 </li>
 </ol>
-<h2 id="linux系统如何下载软件和安装包—wget下载工具">linux系统如何下载软件和安装包—<a href="http://baike.haosou.com/doc/5507280-5743026.html" target="_blank" rel="external">wget</a>下载工具</h2><ul>
+<h3 id="linux系统如何下载软件、安装包—wget下载工具">linux系统如何下载软件、安装包—<a href="http://baike.haosou.com/doc/5507280-5743026.html" target="_blank" rel="external">wget</a>下载工具</h3><ul>
 <li>wget是linux、UNIX系统上常用命令行下载工具。<ul>
-<li>wget安装：# yum -y install wget</li>
-<li>wget用法：# wget [options 选项] [url 下载地址]</li>
-<li>wget示例：# wget -c <a href="http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.rpm" target="_blank" rel="external">http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.rpm</a>   # 下载java rpm包</li>
 <li>wget特点：网络上自动下载工具，支持http、https、ftp的tcp/ip协议下载，同时还是支持http代理和断点续传。</li>
-<li>推荐博客：<a href="http://www.cnblogs.com/peida/archive/2013/03/18/2965369.html" target="_blank" rel="external">「wget实例用法介绍」</a></li>
+<li>wget安装：<code># yum -y install wget</code></li>
+<li>wget用法：<code># wget [options 选项] [url 下载地址]</code></li>
+<li>wget示例：<code># wget -c http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.rpm</code>　　# 下载java rpm包</li>
+<li>博客推荐：<a href="http://www.cnblogs.com/peida/archive/2013/03/18/2965369.html" target="_blank" rel="external">「wget实例用法介绍」</a><br><br></li>
 </ul>
 </li>
 </ul>
-<h2 id="linux系统和windows系统之间文件夹共享—samba-client共享工具">linux系统和windows系统之间文件夹共享—<a href="http://baike.haosou.com/doc/5500246-5737682.html" target="_blank" rel="external">samba-client</a>共享工具</h2><p>  使用windows系统的程序猿一般都是装双系统或安装虚拟机。如何实现windows和虚拟机linux之间的共享呢？<br>  虚拟机软件本身提供“共享文件夹”配置，在此不做讨论。仅讨论在<a href="http://baike.haosou.com/doc/7558050-7832143.html" target="_blank" rel="external">SMB协议</a>基础上sabma如何实现windows和虚拟机linux的共享。</p>
+<h3 id="linux系统和windows系统之间文件夹共享—samba共享工具">linux系统和windows系统之间文件夹共享—<a href="http://baike.haosou.com/doc/5500246-5737682.html" target="_blank" rel="external">samba</a>共享工具</h3><ul>
+<li><p>sabma是在linux、UNIX系统上实现SMB协议的免费工具软件。</p>
 <ul>
-<li>sabma是在linux、UNIX系统上实现SMB协议的免费工具软件。<ul>
-<li>samba特点：由服务器和客户端两部分组成；且提供smb.conf文件可配置。</li>
-<li>samba-client安装：# yum -y install samba</li>
-<li>samba-client用法：#</li>
+<li>samba特点：由服务器和客户端构成，有诸多套件配套使用，提供smb.conf文件可配置。</li>
+<li>samba安装：<code># yum -y install samba</code></li>
+<li>samba常用套件：<code>samba-server</code>、<code>samba-doc</code>、<code>samba-common</code>、<code>samba-client</code>四类</li>
+<li>samba套件安装：<code># yum -y install sabma-*</code></li>
+<li>samba套件简介：<br> [samba-server]：是Samba的服务器软件包，Windows主机访问Linux主机上Samba服务器共享的资源时需要安装。<br> [samba-client]：是Samba的客户端工具，Linux主机访问Windows主机上共享的资源时需要安装。<br> [samba-common]：是Samba的相关工具包，必安程序之一。<br> [samba-doc]：是Samba的库文件包，必安程序之一。</li>
+<li>博客推荐：<a href="http://www.cnblogs.com/mchina/archive/2012/12/18/2816717.html" target="_blank" rel="external">「CentOS下Samba服务器的安装与配置」</a></li>
 </ul>
+<p>Q：用windows系统的程序猿一般都是装双系统或安装虚拟机，如何实现windows和虚拟机linux之间的共享呢？（虚拟机软件本身提供“共享文件夹”配置，在此不做讨论。仅讨论在<a href="http://baike.haosou.com/doc/7558050-7832143.html" target="_blank" rel="external">SMB协议</a>基础上sabma如何实现windows和虚拟机linux的共享。）<br>A：使用Samba-client的smbclient命令访问Windows主机共享文件夹，然后获取资源。<br>Step：<br>1) 在windows主机新建文件夹设为共享文件夹并赋予权限，将可共享资源复制到该共享文件夹中。<br>2) 在linux主机上安装Samba工具及相关套件(samba-client必装)。<br>3) 使用smbclient命令访问windows主机共享文件夹，语法：# <code>smbclient //ip/共享文件夹 -U username%password</code>。<br>4) 在<code>smb：\&gt;</code>模式下：输入<code>ls</code>查看共享文件夹内容，再<code>get filename</code>复制资源到Linux主机上，最后exit或<code>Ctrl+C</code>退出。<br>注：smbclient语法中参数[-U]必须大写，否则报错。</p>
 </li>
 </ul>
-<hr>
-<h4 id="☆在线查询推荐">☆在线查询推荐</h4><h4 id="linux命令手册"><a href="http://linux.51yip.com/" target="_blank" rel="external">linux命令手册</a></h4><h4 id="linux常用命令全集"><a href="http://itlab.idcquan.com/linux/special/linuxcom/" target="_blank" rel="external">linux常用命令全集</a></h4>
+<h4 id="Thank_you_for_reading"><p style="text-align: right; margin-right: 50px">Thank you for reading</p><p></p></h4><hr>
+<h4 id="在线查询推荐">在线查询推荐</h4><h4 id="☆_linux命令手册"><a href="http://linux.51yip.com/" target="_blank" rel="external">☆ linux命令手册</a></h4><h4 id="☆_linux常用命令全集"><a href="http://itlab.idcquan.com/linux/special/linuxcom/" target="_blank" rel="external">☆ linux常用命令全集</a></h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/" data-id="cie0yht71000neco0a1w7iwcm" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/" data-id="cie9kgr99000nq8o0g0c4aaic" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -179,7 +176,7 @@ yum和rpm的基本安装过程（Java为例）
 <section id="comments">
   <!-- 多说评论框 start -->
   	 <!--<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div> -->
-  	<div class="ds-thread" data-thread-key="post-2015-9-1-liunx系统环境安装手册" data-title="Linux系统环境安装手册" data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/"></div>
+  	<div class="ds-thread" data-thread-key="post-2015-9-1-liunx系统环境安装手册" data-title="Linux软件安装和常用工具介绍" data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
@@ -244,7 +241,7 @@ yum和rpm的基本安装过程（Java为例）
       <ul>
         
           <li>
-            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux系统环境安装手册</a>
+            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux软件安装和常用工具介绍</a>
           </li>
         
           <li>

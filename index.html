@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux系统环境安装手册</a>
+      <a class="article-title" href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux软件安装和常用工具介绍</a>
     </h1>
   
 
@@ -93,11 +93,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Linux系统软件安装方法yum和rpm">Linux系统软件安装方法yum和rpm</h2><ol>
-<li><p>yum和rpm的安装区别<br>yum 是网络安装(依赖互联网环境)；从<a href="http://www.ming4.com/news/2792.html">「源」</a>上下载安装包，若存在依赖关系自动下载依赖包并安装。<br>rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。</p>
-</li>
-<li><p>yum和rpm的基本安装过程（Java为例）</p>
-<ul>
+        <h3 id="Linux系统软件安装方法yum和rpm">Linux系统软件安装方法yum和rpm</h3><ol>
+<li>yum和rpm的安装区别<br>yum 是网络安装(依赖互联网环境)；从<a href="http://www.ming4.com/news/2792.html">「源」</a>上下载安装包，若存在依赖关系自动下载依赖包并安装。<br>rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。<br><br/></li>
+<li>yum和rpm的基本安装过程（Java为例）<ul>
 <li><a href="http://man.linuxde.net/yum">「yum命令」</a>安装的基本过程<br>1) 查看系统是否已安装java；<br>2) 若已安装的java不合期望则将其卸载；<br>3) 查看yum库中可安装的java rpm安装包；<br>4) 选择适合的java rpm包进行安装；<br>5) 检查java版本信息确保安装成功。<pre><code>[root<span class="property">@localhost</span> ~]<span class="comment"># ping www.baidu.com         # 检查网络是否正常连通</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># yum list installed java*   # 查看资源库中已经安装的java rpm包</span>
 [root<span class="property">@localhost</span> ~]<span class="comment"># yum -y remove java*        #卸载；参数-y：当需要判断输入[Y/N]时默认为Y，无需输入</span>
@@ -113,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/" data-id="cie0yht71000neco0a1w7iwcm" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/" data-id="cie9kgr99000nq8o0g0c4aaic" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/01/2015-9-1-liunx系统环境安装手册/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -184,7 +182,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cie0yht6x000keco0csoccyql" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cie9kgr95000kq8o0l14w9808" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/28/JMeter插件和工具/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -275,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cie0yht6t000ieco0h9w6bis8" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cie9kgr92000iq8o001env0ox" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -328,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/" data-id="cie0yht620003eco0e7ylbr06" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/" data-id="cie9kgr8i0003q8o0dgtqr8mv" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/高效能人士的七个习惯/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -377,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cie0yht6n000ceco0je5beist" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cie9kgr8w000cq8o0ho0yljub" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/杂谈/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -443,7 +441,7 @@
       <ul>
         
           <li>
-            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux系统环境安装手册</a>
+            <a href="/2015/09/01/2015-9-1-liunx系统环境安装手册/">Linux软件安装和常用工具介绍</a>
           </li>
         
           <li>
