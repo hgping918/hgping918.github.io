@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="HGPing's Blog">
 <meta property="og:description" content="只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程出现异常为了解决一个问题，从而引入一系列问题。
 简单说一下前因后果。在本地win10主机上先配置好JMeter-Plugins插件（复制插件的JMeterPlugins-Standard.jar到JMeter的bin\ext\目录下），其次运行startAgent.bat（ServerAgent-2.2.1），最">
-<meta property="og:updated_time" content="2015-09-14T06:33:21.989Z">
+<meta property="og:updated_time" content="2015-09-14T07:15:23.254Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VMware虚拟机中忘记开机密码怎么办">
 <meta name="twitter:description" content="只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程出现异常为了解决一个问题，从而引入一系列问题。
@@ -114,7 +114,9 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
 INFO    <span class="number">2015</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">05.112</span> [kg<span class="class">.apc</span><span class="class">.p</span>] (): Starting measures: cpu:
 INFO    <span class="number">2015</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">05.404</span> [kg<span class="class">.apc</span><span class="class">.p</span>] (): Client disconnected
 </code></pre><p>这个问题一直困惑和纠结着我，查询很多资料和博客说ServerAgent是运行在被监控服务器上。我运行在win7、win10上都不行，难道非要运行在Windows Server上吗？（最后实践证明运行在WindowServer也不行）</p>
-<p><div style="text-align: right; margin-right: 30px"><a id="more"></a></div><br><br></p>
+<div style="text-align: right; margin-right: 30px"><a id="more"></a></div>
+
+
 <p>带着疑问继续求索，准备在windows Server环境上测试一下JMeter-Plugins。做测试需要各种环境，所以自己搭建了很多虚拟机环境。<strong>启动VMware程序前随便升级一下，当前最新版本<code>VMware 12</code>，专业版永久许可证密钥：<code>5A02H-AU243-TZJ49-GTC7K-3C61N</code>。</strong>启动虚拟机后才发现很久没用搞忘Windows Server 2008 R2登录密码（微软要求登录密码必须包含大小写字母+数字，密码强度高若很久不用真容易忘）。</p>
 <p><strong>忘记VMware虚拟机开机密码怎么办？</strong><br>网上一搜一大堆解决方法，实践操作才发现方法过时、连接失效、步骤太过复杂或不清不楚。哎，不得不感叹现在博客原创很少，搬运工却很多，查阅很多出处都是转载。其实解决的方法很多种，只是大家都想找一种最简单最快捷的方法而已。</p>
 <h3 id="1-_VMware虚拟机映射替换法（没搞定权限问题实践失败）">1. VMware虚拟机映射替换法（没搞定权限问题实践失败）</h3><ul>
@@ -164,7 +166,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="ciejlft1r000kugo0ftll5q4f" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="ciejloi4s000kyco0gmmjii3e" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/#disqus_thread" class="article-comment-link">Comments</a>
       
