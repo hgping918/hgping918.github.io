@@ -5,19 +5,19 @@
   
   <title>VMware虚拟机中忘记开机密码怎么办 | HGPing&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程中出现异常为了解决一个问题，从而引入一系列问题。
-简单说一下前因后果。在本地win10主机上运行startAgent.bat（ServerAgent-2.2.1），其次运行jmeter.bat（JMeter-2.12）。在Apache JMeter应用程序窗口中创建线程组添加监听器“jp@gc - PerfMo">
+  <meta name="description" content="只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程出现异常为了解决一个问题，从而引入一系列问题。
+简单说一下前因后果。在本地win10主机上先配置好JMeter-Plugins插件（复制插件的JMeterPlugins-Standard.jar到JMeter的bin\ext\目录下），其次运行startAgent.bat（ServerAgent-2.2.1），最">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VMware虚拟机中忘记开机密码怎么办">
 <meta property="og:url" content="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/index.html">
 <meta property="og:site_name" content="HGPing's Blog">
-<meta property="og:description" content="我只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程中出现异常为了解决一个问题，从而引入一系列问题。
-简单说一下前因后果。在本地win10主机上运行startAgent.bat（ServerAgent-2.2.1），其次运行jmeter.bat（JMeter-2.12）。在Apache JMeter应用程序窗口中创建线程组添加监听器“jp@gc - PerfMo">
-<meta property="og:updated_time" content="2015-09-11T09:08:18.258Z">
+<meta property="og:description" content="只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程出现异常为了解决一个问题，从而引入一系列问题。
+简单说一下前因后果。在本地win10主机上先配置好JMeter-Plugins插件（复制插件的JMeterPlugins-Standard.jar到JMeter的bin\ext\目录下），其次运行startAgent.bat（ServerAgent-2.2.1），最">
+<meta property="og:updated_time" content="2015-09-14T06:33:21.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VMware虚拟机中忘记开机密码怎么办">
-<meta name="twitter:description" content="我只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程中出现异常为了解决一个问题，从而引入一系列问题。
-简单说一下前因后果。在本地win10主机上运行startAgent.bat（ServerAgent-2.2.1），其次运行jmeter.bat（JMeter-2.12）。在Apache JMeter应用程序窗口中创建线程组添加监听器“jp@gc - PerfMo">
+<meta name="twitter:description" content="只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程出现异常为了解决一个问题，从而引入一系列问题。
+简单说一下前因后果。在本地win10主机上先配置好JMeter-Plugins插件（复制插件的JMeterPlugins-Standard.jar到JMeter的bin\ext\目录下），其次运行startAgent.bat（ServerAgent-2.2.1），最">
   
     <link rel="alternative" href="/atom.xml" title="HGPing&#39;s Blog" type="application/atom+xml">
   
@@ -27,6 +27,17 @@
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
+
+  
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?1b7976fb27750e033010a16b945512e3";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 </head>
 <body>
@@ -96,24 +107,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>我只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程中出现异常为了解决一个问题，从而引入一系列问题。</p>
-<p>简单说一下前因后果。在本地win10主机上运行startAgent.bat（ServerAgent-2.2.1），其次运行jmeter.bat（JMeter-2.12）。在Apache JMeter应用程序窗口中创建线程组添加监听器“jp@gc - PerfMon Metrics Collector”，准备就绪运行JMeter线程。结果startAgent.bat命令行一直提示“Client disconnected”，如下：</p>
+<p>只是想简单实践一下JMeter-Plugins是如何监控服务器CPU、内存等。实践过程出现异常为了解决一个问题，从而引入一系列问题。</p>
+<p>简单说一下前因后果。在本地win10主机上先配置好JMeter-Plugins插件（复制插件的JMeterPlugins-Standard.jar到JMeter的bin\ext\目录下），其次运行startAgent.bat（ServerAgent-2.2.1），最后运行jmeter.bat（JMeter-2.12）。在Apache JMeter应用程序窗口中创建线程组添加监听器“jp@gc - PerfMon Metrics Collector”，准备就绪运行JMeter线程。结果startAgent.bat命令行一直提示“Client disconnected”，如下：</p>
 <pre><code>INFO    <span class="number">2015</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">05.082</span> [kg<span class="class">.apc</span><span class="class">.p</span>] (): Accepting new TCP connection
 INFO    <span class="number">2015</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">05.110</span> [kg<span class="class">.apc</span><span class="class">.p</span>] (): Yep, we received the <span class="string">'test'</span> command
 INFO    <span class="number">2015</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">05.112</span> [kg<span class="class">.apc</span><span class="class">.p</span>] (): Starting measures: cpu:
 INFO    <span class="number">2015</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">14</span>:<span class="number">16</span>:<span class="number">05.404</span> [kg<span class="class">.apc</span><span class="class">.p</span>] (): Client disconnected
 </code></pre><p>这个问题一直困惑和纠结着我，查询很多资料和博客说ServerAgent是运行在被监控服务器上。我运行在win7、win10上都不行，难道非要运行在Windows Server上吗？（最后实践证明运行在WindowServer也不行）</p>
+<p><div style="text-align: right; margin-right: 30px"><a id="more"></a></div><br><br></p>
 <p>带着疑问继续求索，准备在windows Server环境上测试一下JMeter-Plugins。做测试需要各种环境，所以自己搭建了很多虚拟机环境。<strong>启动VMware程序前随便升级一下，当前最新版本<code>VMware 12</code>，专业版永久许可证密钥：<code>5A02H-AU243-TZJ49-GTC7K-3C61N</code>。</strong>启动虚拟机后才发现很久没用搞忘Windows Server 2008 R2登录密码（微软要求登录密码必须包含大小写字母+数字，密码强度高若很久不用真容易忘）。</p>
 <p><strong>忘记VMware虚拟机开机密码怎么办？</strong><br>网上一搜一大堆解决方法，实践操作才发现方法过时、连接失效、步骤太过复杂或不清不楚。哎，不得不感叹现在博客原创很少，搬运工却很多，查阅很多出处都是转载。其实解决的方法很多种，只是大家都想找一种最简单最快捷的方法而已。</p>
-<p>1、VMware虚拟机映射替换法（没搞定权限问题实践失败）。</p>
-<ul>
+<h3 id="1-_VMware虚拟机映射替换法（没搞定权限问题实践失败）">1. VMware虚拟机映射替换法（没搞定权限问题实践失败）</h3><ul>
 <li>启动VMware程序 → 选中某虚拟主机（<code>关闭</code>状态） → 菜单栏<code>虚拟机(M)</code> → <code>设置(S)</code>；</li>
 <li>在“硬件”标签下点击<code>硬盘(SCSI)</code> → 在右边“磁盘实用工具”下点击<code>映射(M)</code> → 在“映射虚拟磁盘”窗口<code>取消勾选</code>“以只读模式打开文件(推荐)(R)”点击<code>确定</code> → 弹出警告选择<code>是(Y)</code>；</li>
 <li>进入本地磁盘(Z:)[实为映射磁盘] → <strong>复制Z:\WINDOWS\repair\下的<code>sam</code>替换Z:\WINDOWS\system32\config下的<code>sam</code></strong> (此步操作问题最多，解决权限问题最关键)；</li>
 <li>最后在“磁盘实用工具”下点击<code>断开连接(N)</code>，若能成功替换sam文件，重启虚拟机主机应该不用输入密码就能进入系统。</li>
 </ul>
-<p>2、重置密码法（方法简单但有前提）</p>
-<ul>
+<h3 id="2-_重设密码法（方法简单但有前提）">2. 重设密码法（方法简单但有前提）</h3><ul>
 <li>重置密码破解登录密码方法简单，但有前提是必须有同版本同权限用户的<strong>密码重置盘</strong>才行。</li>
 <li><strong>密码重置盘</strong>就是一个约2KB大小的<code>userkey.psw</code>文件。</li>
 <li>特点：XX版本的Windows主机“创建密码重置盘”仅适用于XX版本Windows主机，如win7_32位的密码重置盘仅适用win7_32位，Win8_64位密码重置盘仅适用win8_64位。结论为个人实践所得，测试环境有限，不严谨之处还望包涵。</li>
@@ -122,30 +132,39 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
 <ul>
 <li>进入操作系统可通过“控制面板 → 用户账号 → 用户账号 → 创建密码重置盘”来创建密码重置盘。</li>
 <li>一般WindowServer服务器安装好后，首次登录系统时“密码输入框”下方有“创建密码重置盘”引导。</li>
-<li><a href="http://download.csdn.net/detail/hgping918/9094751" target="_blank" rel="external">Windows系列密码重置盘</a>需要的小伙伴点击即进入下载界面。</li>
+<li><a href="http://download.csdn.net/detail/hgping918/9094751" target="_blank" rel="external">Windows系列密码重置盘-下载</a><br>注：创建密码重置盘要用WMware <code>usb控制器</code>支持的U盘做重置密码盘，否则重置密码时一直加载不到密码重置盘。（某些版本VMware的usb控制器不支持USB 3.0）</li>
 </ul>
-<p><strong>重设密码步骤</strong><br>开启虚拟主机 → 登录界面输入错误密码或不输人,敲回车 → 提示用户名和密码不正确，点击确定 → 回到登录界面，点击重置密码 → 插入“密码重置盘”的U盘 → 根据引导提示完成密码重置 → 使用新密码即可登录系统。<br>注意：创建密码重置盘要用WMware <code>usb控制器</code>支持的U盘做重置密码盘，否则重置密码时一直加载不到密码重置盘。因为某些版本的VMware usb控制器不支持最新的USB 3.0。</p>
-<p>配图详解步骤参见<a href="http://jingyan.baidu.com/article/cbcede07112e9902f40b4d2e.html" target="_blank" rel="external">百度经验：怎么创建密码重置盘和重设密码</a></p>
-<p>3、ISO映像修复法</p>
-<p>1) 配置虚拟主机的CD-ROM<br> 启动VMware虚拟机程序 → 选中WindowServer2008R2虚拟主机 → 编辑虚拟机设置 → CD-DVD(SATA) → 连接 → 使用ISO映像文件 → 最后“确定”。<br>2) 进入安装Windows界面<br> 启动虚拟主机 → 在进入系统前不停按ESC进入“boot menu”引导设置 → 选中CD-ROM Drive → 进入安装Windows界面。<br>3) 进Windows系统DOS命令窗口<br>  在安装Windows界面“下一步” → “修复计算机(R)” → 默认第一项，点击“下一步”→ 点击“命令提示符”进入DOS窗口。<br>4) 替换系统界面某工具程序为CMD.EXE<br> 进入虚拟主机系统D盘 → 替换登录系统界面的软键盘工具（osk.exe）为CMD.EXE → 在系统恢复选项界面点击“重新启动”。</p>
-<pre><code><span class="preprocessor"># d:</span>
-<span class="preprocessor"># cd windows\system32</span>
-<span class="preprocessor"># rename osk.exe osk.bak      # 把osk.exe更名为osk.bak，将其备份</span>
-<span class="preprocessor"># copy cmd.exe osk.exe         # 把cmd.exe命名为osk.exe，将其替换</span>
-<span class="preprocessor"># exit 回车                   # 退出DOS窗口</span>
-</code></pre><p>5) 利用软键盘工具启动CMD.EXE，修复管理员密码。<br>  点击登录系统界面的“轻松访问”按钮 → 勾选“屏幕键盘” → 点击确定弹出DOS窗口。<br>6) 在DOS窗口中设置管理员新的登录密码</p>
-<pre><code><span class="preprocessor"># explorer     #修复命令，界面会出现各种个性化设置</span>
-<span class="preprocessor"># net user administrator Admin1234    #设置administrator用户的密码为Admin1234</span>
-<span class="preprocessor"># Exit            # 退出DOS窗口</span>
-</code></pre><p>7) 恢复osk.bak为osk.exe<br>  进入’C:\Windows\System32’下先删除osk.exe，再改osk.bak为osk.exe。<br>  若不恢复也不影响系统使用，直接修改失败，可在其它主机上复制一个osk.exe或重复上面步骤使用’rename osk.bak osk.exe’。</p>
-<p>4、没有办法的方法<br>  哎，实在没有办法或嫌麻烦就只有重装一次虚拟主机。记得创建密码重置盘、增加密码提示、记事本记录密码，以防万一哟。<br>（完）</p>
+<p><strong>如何重设密码？</strong></p>
+<ul>
+<li>开启虚拟主机 → 登录界面输入错误密码或不输人敲回车 → 提示用户名和密码不正确；</li>
+<li>回到登录界面 → 插入“密码重置盘”的U盘 → 点击密码输入框下“重设密码”；</li>
+<li>根据“重设密码引导”完成密码重设 → 最后使用新密码登录系统。</li>
+</ul>
+<h3 id="3-_ISO映像修复法">3. ISO映像修复法</h3><ul>
+<li>配置虚拟主机的CD-ROM<br>启动VMware虚拟机程序 → 选中WindowServer2008R2虚拟主机 → 编辑虚拟机设置 → CD-DVD(SATA) → 连接 → 使用ISO映像文件（设置ISO路径） → 最后“确定”。</li>
+<li>进入安装Windows界面<br>启动虚拟主机 → 在进入系统前不停按ESC进入“boot menu”引导设置 → 选中CD-ROM Drive → 进入安装Windows界面。</li>
+<li>进Windows系统DOS命令窗口<br>在安装Windows界面“下一步” → “修复计算机(R)” → 默认第一项，点击“下一步”→ 点击“命令提示符”进入DOS窗口。</li>
+<li>替换系统界面某工具程序为CMD.EXE<br>进入虚拟主机系统D盘 → 替换登录系统界面的软键盘工具（osk.exe）为CMD.EXE → 在系统恢复选项界面点击“重新启动”。<pre><code><span class="preprocessor">#&gt; d:                           # 进入系统D盘</span>
+<span class="preprocessor">#&gt; cd windows\system32          # 进入system32文件夹下</span>
+<span class="preprocessor">#&gt; rename osk.exe osk.bak       # 把osk.exe更名为osk.bak，将其备份</span>
+<span class="preprocessor">#&gt; copy cmd.exe osk.exe         # 把cmd.exe命名为osk.exe，将其替换</span>
+<span class="preprocessor">#&gt; exit                         # 回车退出</span>
+</code></pre></li>
+<li>利用软键盘工具启动CMD.EXE，修复管理员密码。<br>点击登录系统界面的“轻松访问”按钮 → 勾选“屏幕键盘” → 点击确定弹出DOS窗口。</li>
+<li>在DOS窗口中设置管理员新的登录密码<pre><code><span class="preprocessor">#&gt; explorer                             #修复命令，界面会出现各种个性化设置</span>
+<span class="preprocessor">#&gt; net user administrator Admin1234     #设置administrator用户的密码为Admin1234</span>
+<span class="preprocessor">#&gt; Exit                                 # 退出DOS窗口</span>
+</code></pre></li>
+<li>恢复osk.bak为osk.exe<br>进入’C:\Windows\System32’下先删除osk.exe，再改osk.bak为osk.exe。<br>若不恢复也不影响系统使用，直接修改失败，可在其它主机上复制一个osk.exe或重复上面步骤使用’rename osk.bak osk.exe’。</li>
+</ul>
+<h3 id="4-_没有办法的办法——重装虚拟主机">4. 没有办法的办法——重装虚拟主机</h3><p>   亲，记得创建<strong>密码重置盘</strong>、增加<strong>密码提示</strong>或使用文档记录<strong>密码</strong>，以防万一。<br>（完）</p>
 <h3 id="Thanks_for_reading"><div style="text-align: right; margin-right: 50px"> Thanks for reading</div></h3><hr>
 <p>图文详解请查阅<a href="http://jingyan.baidu.com/article/22a299b5c701af9e19376ad0.html" target="_blank" rel="external">百度经验：VMware虚拟机忘记开机密码怎么办？</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="ciejbq43h000k4ko0hn6xwjes" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="ciejlft1r000kugo0ftll5q4f" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -155,6 +174,15 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
   
     
 <nav id="article-nav">
+  
+    <a href="/2015/09/14/高效能人士的七个习惯/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          《高效能人士的七个习惯》
+        
+      </div>
+    </a>
   
   
     <a href="/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" id="article-nav-older" class="article-nav-link-wrap">
@@ -224,7 +252,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
   <div class="widget-wrap">
     <h3 class="widget-title">档案</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -234,6 +262,10 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
     <h3 class="widget-title">最近</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/09/14/高效能人士的七个习惯/">《高效能人士的七个习惯》</a>
+          </li>
         
           <li>
             <a href="/2015/09/09/VMware虚拟机中忘记开机密码怎么办/">VMware虚拟机中忘记开机密码怎么办</a>
@@ -249,10 +281,6 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
         
           <li>
             <a href="/2015/08/28/JMeter插件和工具/">JMeter插件和工具</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/27/Web界面边界输入测试/">Web界面输入边界异常测试</a>
           </li>
         
       </ul>

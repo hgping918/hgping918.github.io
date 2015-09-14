@@ -17,7 +17,7 @@ jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreference
 jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreferences&amp;lt;init&amp;gt;WARN">
 <meta property="og:image" content="http://blog.hgping.com/images/warning1.jpg">
 <meta property="og:image" content="http://blog.hgping.com/images/regedit.jpg">
-<meta property="og:updated_time" content="2015-09-08T13:12:11.555Z">
+<meta property="og:updated_time" content="2015-09-14T06:39:48.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JMeter异常解决WARNING: Could not open/create prefs root ..">
 <meta name="twitter:description" content="项目提供的二次开发接口较多，为了提高测试效率保证质量引进JMeter做二次开发接口测试。JMeter相关安装配置就绪后，双击jmeter.bat启动JMeter → 先弹出jmeter.bat 命令行窗口 → 随后弹出Apache JMeter应用程序窗口。
@@ -32,6 +32,17 @@ jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreference
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
+
+  
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?1b7976fb27750e033010a16b945512e3";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 </head>
 <body>
@@ -106,15 +117,17 @@ jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreference
 <li><code>jmeter.bat</code> 命令行有异常警告信息，如下：<br><code>java.util.WindowsPreferences&lt;init&gt;</code><br><code>WARNING:Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5．</code></li>
 </ul>
 <p><img src="/images/warning1.jpg" alt=""></p>
+<div style="text-align: right; margin-right: 30px"><a id="more"></a></div>
+
 <ul>
 <li>实践验证这种异常警告：不影响JMeter本身的运行，也不影响接口测试和结果，因此可以忽略不计。<br>虽说可以忽略不计，但还是有小伙伴看着不爽或有强迫症非要干掉这异常警告，那该怎么办呢？<br><strong>解决方法：</strong><br>点击Windows的<code>开始</code>（或Win键+R） → “运行”窗口输入<code>regedit</code>进入注册表 → <code>HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft</code> → 右击“JavaSoft”选择<code>权限</code> → 勾选权限为<code>完全控制</code> → 点击<code>确定</code>后重新启动JMeter程序无此警告信息。</li>
 </ul>
 <p><img src="/images/regedit.jpg" alt=""><br>（完）</p>
-<h3 id="Thanks_for_reading"><div style="text-align: right; margin-right: 50px">Thanks for reading </div></h3>
+<h3 id="Thanks_for_reading"><div style="text-align: right; margin-right: 30px">Thanks for reading </div></h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" data-id="ciejbq43p000q4ko0zqwkuo0n" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" data-id="ciejlft1z000qugo0s1qct79a" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -202,7 +215,7 @@ jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreference
   <div class="widget-wrap">
     <h3 class="widget-title">档案</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -212,6 +225,10 @@ jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreference
     <h3 class="widget-title">最近</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/09/14/高效能人士的七个习惯/">《高效能人士的七个习惯》</a>
+          </li>
         
           <li>
             <a href="/2015/09/09/VMware虚拟机中忘记开机密码怎么办/">VMware虚拟机中忘记开机密码怎么办</a>
@@ -227,10 +244,6 @@ jmeter.bat 命令行有异常警告信息，如下：java.util.WindowsPreference
         
           <li>
             <a href="/2015/08/28/JMeter插件和工具/">JMeter插件和工具</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/27/Web界面边界输入测试/">Web界面输入边界异常测试</a>
           </li>
         
       </ul>
