@@ -91,6 +91,86 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Vagrant入门基础实例应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/24/Vagrant入门基础实例应用/" class="article-date">
+  <time datetime="2015-09-24T03:12:48.000Z" itemprop="datePublished">2015-09-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Vagrant/">Vagrant</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/24/Vagrant入门基础实例应用/">Vagrant入门基础实例应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>大规模测试时上百台虚拟机如何维护，项目的云部署如何更专业的进行，都需要寻找一些工具解决。而puppet配合vagrant是用来管理大量虚拟机的主流解决方案，可将其作为进入这个领域的一个突破口。</p>
+<h4 id="术语介绍">术语介绍</h4><ul>
+<li>Puppet 是一种Linux、Unix、windows平台的集中配置管理系统，用puppet描述语言来管理配置文件、用户、软件包、系统服务等。</li>
+<li>Vagrant 是一种基于Ruby的管理工具，用于搭建和配置轻量级的、可再生的、便携式的开发测试环境。</li>
+<li>VagrantBox 是一个配置好的基础虚拟机映像，Vagrant使用盒子来创建开发环境，支持VirtualBox、VMware、KVM等虚拟机。</li>
+<li>VirtualBox 是一款开源虚拟机软件，可以安装并且执行Windows、DOS、Linux、OS/2 Warp等系统作为客户端操作系统。</li>
+</ul>
+<h4 id="准备工作">准备工作</h4><ul>
+<li>安装 VirtualBox（因为Vagrant 搭建的<code>开发、测试环境</code>需要借助VirtualBox虚拟化系统完成部署）<br>VirtualBox 下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">https://www.virtualbox.org/wiki/Downloads</a><br>VirtualBox 安装过程参见：<a href="http://jingyan.baidu.com/article/5552ef473d3ff5518ffbc908.html" target="_blank" rel="external">VirtualBox虚拟机系列教程：[1]虚拟机的安装</a></li>
+<li>下载 VagrantBox（Vagrant 添加 VagrantBox 支持<code>在线添加</code>和<code>本地添加</code>两种方式，推荐使用<code>本地添加</code>）<br>VagrantBox 下载地址：<a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a><br>注：Vagrant 也支持 VMware，不过 VMware 是收费的，对应的 Vagrant 版本也是收费的。</li>
+</ul>
+<h4 id="安装Vagrant">安装Vagrant</h4><ol>
+<li><p>下载Vagrant<br>Vagrant 下载地址：<a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">https://www.vagrantup.com/downloads.html</a></p>
+</li>
+<li><p>安装Vagrant<br>Windows上安装Vagrant很简单，直接运行<code>vagrant_1.7.3.msi</code>安装文件，根据引导完成安装（自动完成<code>环境变量</code>配置）。<br>Vagrant安装过程参见：<a href="http://jingyan.baidu.com/article/f0e83a25a8fdb022e591012d.html" target="_blank" rel="external">Vagrant 系列：[1]Windows 上安装 Vagrant</a></p>
+</li>
+<li><p>查看Vagrant版本<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → DOS命令提示符 → 输入 <code>vagrant -v</code>  → 显示 Vagrant 1.7.3，说明Vagrant安装成功。</p>
+</li>
+</ol>
+<h4 id="添加VagrantBox">添加VagrantBox</h4><ol>
+<li><p>创建Vagrant工程目录<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → 选择适当磁盘路径 → <code>mkdir {project_directory}</code> 创建工程目录。<br>‘project_directory’ 为 Vagrant 工程目录的文件夹名，如 “Centos6.4”。</p>
+</li>
+<li><p>初始化Vagrant工程<br>进入工程目录 → 运行初始化命令：vagrant init {Vagrant_project_name} (可省略) → 工程目录中新增 <code>Vagrantfile</code> 文件。<br>‘Vagrant_project_name’ 为 Vagrant 工程的名称，若省略则默认为 base。</p>
+</li>
+<li><p>添加VagrantBox</p>
+<ul>
+<li><code>在线添加</code>方式的语法：vagrant box add {Vagrant_project_name} {VagrantBox_url}</li>
+<li><code>本地添加</code>方式的语法：vagrant box add {Vagrant_project_name} {x:\..\VagrantBox_name} （推荐）<br>‘VagrantBox_url’ 为 VagrantBox 的“下载地址”，可在 <a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a> 查找复制<br>‘x:\..\VagrantBox_name’ 为本地路径 + VagrantBox 全称，若将 VagrantBox 拷贝到工程目录下则无需添加路径。</li>
+<li>添加成功后工程目录下新增 <code>.vagrant</code> 文件夹。</li>
+</ul>
+</li>
+</ol>
+<h4 id=""> </h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/" data-id="cifqszrj2000riwo0suwr6e0n" class="article-share-link">Share</a>
+      
+        <a href="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/虚拟机/">虚拟机</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+  
     <article id="post-个人百度经验汇总链接" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/09/21/个人百度经验汇总链接/" class="article-date">
@@ -130,7 +210,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/21/个人百度经验汇总链接/" data-id="ciexknbpk000ic4o0vctcqiaf" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/21/个人百度经验汇总链接/" data-id="cifqszrir000jiwo0gup12epo" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/21/个人百度经验汇总链接/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -188,7 +268,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="ciexknbpu000qc4o0lepahucn" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="cifqszrj7000wiwo0al7hmy12" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -244,7 +324,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" data-id="ciexknbq1000wc4o0rsr5fclh" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" data-id="cifqszrje0012iwo0easpgnws" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -305,7 +385,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/03/高效能人士的七个习惯/" data-id="ciexknbou0004c4o07mxhf2zx" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/03/高效能人士的七个习惯/" data-id="cifqszri50005iwo0kihqn658" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/03/高效能人士的七个习惯/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -367,7 +447,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/" data-id="ciexknbq5000yc4o07o746rsq" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/" data-id="cifqszrjh0014iwo05uqc7033" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -440,7 +520,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="ciexknbpx000tc4o07mmbw0fj" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cifqszrja000ziwo00nq5j6af" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/28/JMeter插件和工具/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -532,7 +612,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="ciexknbpq000oc4o0nfrwrv23" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cifqszriz000piwo0zrrkvmjn" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -581,7 +661,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="ciexknbph000fc4o0i4fm7uyw" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cifqszril000giwo0l4cpi3wx" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/杂谈/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -628,64 +708,9 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="ciexknbpd000cc4o0ostogc68" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="cifqszrii000diwo0on9au5iu" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-
-  
-    <article id="post-测试总结写作模板" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/07/测试总结写作模板/" class="article-date">
-  <time datetime="2015-08-07T05:46:39.000Z" itemprop="datePublished">2015-08-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/测试模板/">测试模板</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/07/测试总结写作模板/">测试总结写作模板</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p><a href="http://www.baidu.com"><img src="/images/test.jpg" alt="" title="test"></a></p>
-<p>　 软件测试总结是对整个测试流程进行科学和系统的总结，并根据这些结果对测试进行评价。这种报告是测试人员对测试工作进行总结。</p>
-<ol>
-<li><p>概述<br>1.1 编写目的<br>　 编写测试总结报告，主要是总局测试工作。<br>1.2 项目背景<br>　 对项目目标和目的进行简要说明。<br>1.3 系统简介<br>1.4 术语和缩写词<br>　 对整个测试过程中所使用的术语做出标准的定义，让项目的相关者很容易地理解测试过程中所使用的术语，便于查阅。<br>1.5 测试工具<br>1.6 参考资料</p>
-<div style="text-align: right; margin-right: 30px">
-        
-          <p class="article-more-link">
-            <a href="/2015/08/07/测试总结写作模板/#more">阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/07/测试总结写作模板/" data-id="ciexknbpa0009c4o01kdapnhb" class="article-share-link">Share</a>
-      
-        <a href="http://blog.hgping.com/2015/08/07/测试总结写作模板/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -714,6 +739,10 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       <ul>
         
           <li>
+            <a href="/2015/09/24/Vagrant入门基础实例应用/">Vagrant入门基础实例应用</a>
+          </li>
+        
+          <li>
             <a href="/2015/09/21/个人百度经验汇总链接/">个人百度经验汇总链接</a>
           </li>
         
@@ -729,10 +758,6 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
             <a href="/2015/09/03/高效能人士的七个习惯/">《高效能人士的七个习惯》</a>
           </li>
         
-          <li>
-            <a href="/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/">Linux软件安装和常用工具介绍</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -742,7 +767,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JMeter/">JMeter</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/书籍/">书籍</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/百度经验/">百度经验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/虚拟机/">虚拟机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JMeter/">JMeter</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant/">Vagrant</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/书籍/">书籍</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/百度经验/">百度经验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/虚拟机/">虚拟机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -751,7 +776,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/我的阅读/" style="font-size: 10px;">我的阅读</a>
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/我的阅读/" style="font-size: 10px;">我的阅读</a> <a href="/tags/虚拟机/" style="font-size: 10px;">虚拟机</a>
     </div>
   </div>
 

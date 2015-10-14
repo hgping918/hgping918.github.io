@@ -17,7 +17,7 @@ yum和rpm的基本安装过程（Java为例）
 yum和rpm的安装区别yum 是网络安装(依赖互联网环境)；从「源」上下载安装包，若存在依赖关系自动下载依赖包并安装。rpm 是本地安装；安装包存在本地，存在依赖关系的安装包需自己手动逐一安装；个人修改编译过的安装包只能用rpm安装。
 yum和rpm的基本安装过程（Java为例）
 「yum命令」安装的基本过程1) 查看系统是否已安装java；2) 若已安">
-<meta property="og:updated_time" content="2015-09-14T08:20:13.881Z">
+<meta property="og:updated_time" content="2015-10-12T06:50:07.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux软件安装和常用工具介绍">
 <meta name="twitter:description" content="Linux系统软件安装方法yum和rpm
@@ -160,13 +160,14 @@ ga('send', 'pageview');
 <li><p>sabma是在linux、UNIX系统上实现SMB协议的免费工具软件。</p>
 <ul>
 <li>samba特点：由服务器和客户端构成，有诸多套件配套使用，提供smb.conf文件可配置。</li>
-<li>samba安装：<code># yum -y install samba</code></li>
+<li>samba安装：<code># yum -y install samba.*</code></li>
+<li>samba套件安装：<code># yum -y install samba-server* samba-doc* samba-common* samba-client*</code></li>
 <li>samba常用套件：<code>samba-server</code>、<code>samba-doc</code>、<code>samba-common</code>、<code>samba-client</code>四类</li>
-<li>samba套件安装：<code># yum -y install sabma-*</code></li>
 <li>samba套件简介：<br> [samba-server]：是Samba的服务器软件包，Windows主机访问Linux主机上Samba服务器共享的资源时需要安装。<br> [samba-client]：是Samba的客户端工具，Linux主机访问Windows主机上共享的资源时需要安装。<br> [samba-common]：是Samba的相关工具包，必安程序之一。<br> [samba-doc]：是Samba的库文件包，必安程序之一。</li>
 <li>博客推荐：<a href="http://www.cnblogs.com/mchina/archive/2012/12/18/2816717.html" target="_blank" rel="external">「CentOS下Samba服务器的安装与配置」</a></li>
 </ul>
-<p>Q：用windows系统的程序猿一般都是装双系统或安装虚拟机，如何实现windows和虚拟机linux之间的共享呢？（虚拟机软件本身提供“共享文件夹”配置，在此不做讨论。仅讨论在<a href="http://baike.haosou.com/doc/7558050-7832143.html" target="_blank" rel="external">SMB协议</a>基础上sabma如何实现windows和虚拟机linux的共享。）<br>A：使用Samba-client的smbclient命令访问Windows主机共享文件夹，然后获取资源。<br>Step：<br>1) 在windows主机新建文件夹设为共享文件夹并赋予权限，将可共享资源复制到该共享文件夹中。<br>2) 在linux主机上安装Samba工具及相关套件(samba-client必装)。<br>3) 使用smbclient命令访问windows主机共享文件夹，语法：# <code>smbclient //ip/共享文件夹 -U username%password</code>。<br>4) 在<code>smb：\&gt;</code>模式下：输入<code>ls</code>查看共享文件夹内容，再<code>get filename</code>复制资源到Linux主机上，最后exit或<code>Ctrl+C</code>退出。<br><em>注：smbclient语法中参数[-U]必须大写，否则报错。</em><br>（完）</p>
+<p>Q：本地安装虚拟机如何实现windows和虚拟机linux之间的共享呢？<br>A：使用Samba-client的smbclient命令访问Windows主机共享文件夹，然后获取资源。<br>Step：<br>1) 在windows主机新建文件夹设为共享文件夹并赋予权限，将可共享资源复制到该共享文件夹中。<br>2) 在linux主机上安装Samba工具及相关套件(samba-client必装)。<br>3) 使用smbclient命令访问windows主机共享文件夹，语法：# <code>smbclient //ip/共享文件夹 -U username%password</code>。<br>4) 在<code>smb：\&gt;</code>模式下：输入<code>ls</code>查看共享文件夹内容，再<code>get filename</code>复制资源到Linux主机上，最后exit或<code>Ctrl+C</code>退出。<br><em>注：smbclient语法中参数[-U]必须大写，否则报错。</em><br>或者使用虚拟机提供“共享文件夹”配置，实现windows和虚拟主机linux的共享。<br>又或者使用 SecureCRT (SSH工具)的 “Connect SFTP Session(Alt+p)” 通过SFTP实现 windows 和虚拟主机 linux 共享。</p>
+<p>（完）</p>
 <h4 id="Thanks_for_reading"><p style="text-align: right; margin-right: 50px">Thanks for reading</p><p></p></h4></li>
 </ul>
 <hr>
@@ -174,7 +175,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/" data-id="ciexknbq5000yc4o07o746rsq" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/" data-id="cifqszrjh0014iwo05uqc7033" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -239,6 +240,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/2015/09/24/Vagrant入门基础实例应用/">Vagrant入门基础实例应用</a>
+          </li>
+        
+          <li>
             <a href="/2015/09/21/个人百度经验汇总链接/">个人百度经验汇总链接</a>
           </li>
         
@@ -254,10 +259,6 @@ ga('send', 'pageview');
             <a href="/2015/09/03/高效能人士的七个习惯/">《高效能人士的七个习惯》</a>
           </li>
         
-          <li>
-            <a href="/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/">Linux软件安装和常用工具介绍</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -267,7 +268,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JMeter/">JMeter</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/书籍/">书籍</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/百度经验/">百度经验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/虚拟机/">虚拟机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JMeter/">JMeter</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vagrant/">Vagrant</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/书籍/">书籍</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试模板/">测试模板</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/百度经验/">百度经验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/虚拟机/">虚拟机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -276,7 +277,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/我的阅读/" style="font-size: 10px;">我的阅读</a>
+      <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/我的阅读/" style="font-size: 10px;">我的阅读</a> <a href="/tags/虚拟机/" style="font-size: 10px;">虚拟机</a>
     </div>
   </div>
 
