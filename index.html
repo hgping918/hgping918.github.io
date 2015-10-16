@@ -126,35 +126,19 @@ ga('send', 'pageview');
 <li>VirtualBox 是一款开源虚拟机软件，可以安装并且执行Windows、DOS、Linux、OS/2 Warp等系统作为客户端操作系统。</li>
 </ul>
 <h4 id="准备工作">准备工作</h4><ul>
-<li>安装 VirtualBox（因为Vagrant 搭建的<code>开发、测试环境</code>需要借助VirtualBox虚拟化系统完成部署）<br>VirtualBox 下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">https://www.virtualbox.org/wiki/Downloads</a><br>VirtualBox 安装过程参见：<a href="http://jingyan.baidu.com/article/5552ef473d3ff5518ffbc908.html" target="_blank" rel="external">VirtualBox虚拟机系列教程：[1]虚拟机的安装</a></li>
-<li>下载 VagrantBox（Vagrant 添加 VagrantBox 支持<code>在线添加</code>和<code>本地添加</code>两种方式，推荐使用<code>本地添加</code>）<br>VagrantBox 下载地址：<a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a><br>注：Vagrant 也支持 VMware，不过 VMware 是收费的，对应的 Vagrant 版本也是收费的。</li>
-</ul>
-<h4 id="安装Vagrant">安装Vagrant</h4><ol>
-<li><p>下载Vagrant<br>Vagrant 下载地址：<a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">https://www.vagrantup.com/downloads.html</a></p>
+<li><p>安装 VirtualBox<br>因为Vagrant 搭建的<code>开发、测试环境</code>需要借助VirtualBox虚拟化系统完成部署。<br>VirtualBox 下载地址：<a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a><br>VirtualBox 安装过程参见：<a href="http://jingyan.baidu.com/article/5552ef473d3ff5518ffbc908.html">VirtualBox虚拟机系列教程：[1]虚拟机的安装</a></p>
 </li>
-<li><p>安装Vagrant<br>Windows上安装Vagrant很简单，直接运行<code>vagrant_1.7.3.msi</code>安装文件，根据引导完成安装（自动完成<code>环境变量</code>配置）。<br>Vagrant安装过程参见：<a href="http://jingyan.baidu.com/article/f0e83a25a8fdb022e591012d.html" target="_blank" rel="external">Vagrant 系列：[1]Windows 上安装 Vagrant</a></p>
-</li>
-<li><p>查看Vagrant版本<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → DOS命令提示符 → 输入 <code>vagrant -v</code>  → 显示 Vagrant 1.7.3，说明Vagrant安装成功。</p>
-</li>
-</ol>
-<h4 id="添加VagrantBox">添加VagrantBox</h4><ol>
-<li><p>创建Vagrant工程目录<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → 选择适当磁盘路径 → <code>mkdir {project_directory}</code> 创建工程目录。<br>‘project_directory’ 为 Vagrant 工程目录的文件夹名，如 “Centos6.4”。</p>
-</li>
-<li><p>初始化Vagrant工程<br>进入工程目录 → 运行初始化命令：vagrant init {Vagrant_project_name} (可省略) → 工程目录中新增 <code>Vagrantfile</code> 文件。<br>‘Vagrant_project_name’ 为 Vagrant 工程的名称，若省略则默认为 base。</p>
-</li>
-<li><p>添加VagrantBox</p>
-<ul>
-<li><code>在线添加</code>方式的语法：vagrant box add {Vagrant_project_name} {VagrantBox_url}</li>
-<li><code>本地添加</code>方式的语法：vagrant box add {Vagrant_project_name} {x:\..\VagrantBox_name} （推荐）<br>‘VagrantBox_url’ 为 VagrantBox 的“下载地址”，可在 <a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a> 查找复制<br>‘x:\..\VagrantBox_name’ 为本地路径 + VagrantBox 全称，若将 VagrantBox 拷贝到工程目录下则无需添加路径。</li>
-<li>添加成功后工程目录下新增 <code>.vagrant</code> 文件夹。</li>
-</ul>
-</li>
-</ol>
-<h4 id=""> </h4>
+<li><p>下载 VagrantBox<br>Vagrant 添加 VagrantBox 支持<code>在线添加</code>和<code>本地添加</code>两种方式，推荐使用<code>本地添加</code>。<br>VagrantBox 下载地址：<a href="http://www.vagrantbox.es">http://www.vagrantbox.es</a><br><em>注：Vagrant 也支持 VMware，不过 VMware 是收费的，对应的 Vagrant 版本也是收费的。</em></p>
+<div style="text-align: right; margin-right: 30px">
+        
+          <p class="article-more-link">
+            <a href="/2015/09/24/Vagrant入门基础实例应用/#more">阅读全文</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/" data-id="cifqszrj2000riwo0suwr6e0n" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/" data-id="ciftb4ttn000r44o0288d7k52" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -210,7 +194,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/21/个人百度经验汇总链接/" data-id="cifqszrir000jiwo0gup12epo" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/21/个人百度经验汇总链接/" data-id="ciftb4tt7000j44o0hr2aqr9d" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/21/个人百度经验汇总链接/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -268,7 +252,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="cifqszrj7000wiwo0al7hmy12" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/" data-id="ciftb4ttr000w44o08wsd2gbt" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/09/VMware虚拟机中忘记开机密码怎么办/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -324,7 +308,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" data-id="cifqszrje0012iwo0easpgnws" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/" data-id="ciftb4tty001244o0b69z2cds" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/08/JMeter异常解决WARNING-Could-not-open-create-prefs-root-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -385,7 +369,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/03/高效能人士的七个习惯/" data-id="cifqszri50005iwo0kihqn658" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/03/高效能人士的七个习惯/" data-id="ciftb4tsm000544o06j7nfbgv" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/03/高效能人士的七个习惯/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -447,7 +431,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/" data-id="cifqszrjh0014iwo05uqc7033" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/" data-id="ciftb4tu3001444o09447g2qg" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/01/2015-9-1-liunx软件安装和常用工具介绍/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -520,7 +504,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="cifqszrja000ziwo00nq5j6af" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/28/JMeter插件和工具/" data-id="ciftb4ttu000z44o0iw6u9mcp" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/28/JMeter插件和工具/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -612,7 +596,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="cifqszriz000piwo0zrrkvmjn" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/" data-id="ciftb4tth000p44o0w9frmdls" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/27/Web界面边界输入测试/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -661,7 +645,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="cifqszril000giwo0l4cpi3wx" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/19/杂谈/" data-id="ciftb4tt4000g44o0vaa8y3g6" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/19/杂谈/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -708,7 +692,7 @@ INFO    <span class="number">2015</span>-<span class="number">09</span>-<span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="cifqszrii000diwo0on9au5iu" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/" data-id="ciftb4tsz000d44o0xdyqwwyf" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/08/13/测试人员基本自我要求/#disqus_thread" class="article-comment-link">Comments</a>
       

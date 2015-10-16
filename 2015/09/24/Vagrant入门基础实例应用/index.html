@@ -17,7 +17,7 @@ Vagrant 是一种基于Ruby的管理工具，用于">
 术语介绍
 Puppet 是一种Linux、Unix、windows平台的集中配置管理系统，用puppet描述语言来管理配置文件、用户、软件包、系统服务等。
 Vagrant 是一种基于Ruby的管理工具，用于">
-<meta property="og:updated_time" content="2015-10-08T09:04:32.420Z">
+<meta property="og:updated_time" content="2015-10-16T07:00:21.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vagrant入门基础实例应用">
 <meta name="twitter:description" content="大规模测试时上百台虚拟机如何维护，项目的云部署如何更专业的进行，都需要寻找一些工具解决。而puppet配合vagrant是用来管理大量虚拟机的主流解决方案，可将其作为进入这个领域的一个突破口。
@@ -134,35 +134,105 @@ ga('send', 'pageview');
 <li>VirtualBox 是一款开源虚拟机软件，可以安装并且执行Windows、DOS、Linux、OS/2 Warp等系统作为客户端操作系统。</li>
 </ul>
 <h4 id="准备工作">准备工作</h4><ul>
-<li>安装 VirtualBox（因为Vagrant 搭建的<code>开发、测试环境</code>需要借助VirtualBox虚拟化系统完成部署）<br>VirtualBox 下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">https://www.virtualbox.org/wiki/Downloads</a><br>VirtualBox 安装过程参见：<a href="http://jingyan.baidu.com/article/5552ef473d3ff5518ffbc908.html" target="_blank" rel="external">VirtualBox虚拟机系列教程：[1]虚拟机的安装</a></li>
-<li>下载 VagrantBox（Vagrant 添加 VagrantBox 支持<code>在线添加</code>和<code>本地添加</code>两种方式，推荐使用<code>本地添加</code>）<br>VagrantBox 下载地址：<a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a><br>注：Vagrant 也支持 VMware，不过 VMware 是收费的，对应的 Vagrant 版本也是收费的。</li>
+<li><p>安装 VirtualBox<br>因为Vagrant 搭建的<code>开发、测试环境</code>需要借助VirtualBox虚拟化系统完成部署。<br>VirtualBox 下载地址：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">https://www.virtualbox.org/wiki/Downloads</a><br>VirtualBox 安装过程参见：<a href="http://jingyan.baidu.com/article/5552ef473d3ff5518ffbc908.html" target="_blank" rel="external">VirtualBox虚拟机系列教程：[1]虚拟机的安装</a></p>
+</li>
+<li><p>下载 VagrantBox<br>Vagrant 添加 VagrantBox 支持<code>在线添加</code>和<code>本地添加</code>两种方式，推荐使用<code>本地添加</code>。<br>VagrantBox 下载地址：<a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a><br><em>注：Vagrant 也支持 VMware，不过 VMware 是收费的，对应的 Vagrant 版本也是收费的。</em></p>
+<div style="text-align: right; margin-right: 30px"><a id="more"></a></div>
+
+</li>
 </ul>
 <h4 id="安装Vagrant">安装Vagrant</h4><ol>
 <li><p>下载Vagrant<br>Vagrant 下载地址：<a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="external">https://www.vagrantup.com/downloads.html</a></p>
 </li>
 <li><p>安装Vagrant<br>Windows上安装Vagrant很简单，直接运行<code>vagrant_1.7.3.msi</code>安装文件，根据引导完成安装（自动完成<code>环境变量</code>配置）。<br>Vagrant安装过程参见：<a href="http://jingyan.baidu.com/article/f0e83a25a8fdb022e591012d.html" target="_blank" rel="external">Vagrant 系列：[1]Windows 上安装 Vagrant</a></p>
 </li>
-<li><p>查看Vagrant版本<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → DOS命令提示符 → 输入 <code>vagrant -v</code>  → 显示 Vagrant 1.7.3，说明Vagrant安装成功。</p>
+<li><p>查看Vagrant版本<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → DOS命令提示符 → 输入 <code>vagrant -v</code>  → 显示版本信息则安装成功，如Vagrant 1.7.3。</p>
 </li>
 </ol>
 <h4 id="添加VagrantBox">添加VagrantBox</h4><ol>
-<li><p>创建Vagrant工程目录<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → 选择适当磁盘路径 → <code>mkdir {project_directory}</code> 创建工程目录。<br>‘project_directory’ 为 Vagrant 工程目录的文件夹名，如 “Centos6.4”。</p>
+<li><p>创建Vagrant工程目录<br>开始 → 运行(Window键+R) → 输入<code>cmd</code> → 选择适当磁盘路径 → <code>mkdir {project_directory}</code> 创建工程目录。<br>project_directory 为 Vagrant 工程目录的文件夹名，如 “Centos6.4”。</p>
 </li>
-<li><p>初始化Vagrant工程<br>进入工程目录 → 运行初始化命令：vagrant init {Vagrant_project_name} (可省略) → 工程目录中新增 <code>Vagrantfile</code> 文件。<br>‘Vagrant_project_name’ 为 Vagrant 工程的名称，若省略则默认为 base。</p>
+<li><p>初始化Vagrant工程<br>进入工程目录 → 运行初始化命令：vagrant init {box_name}  → 工程目录中新增 <code>Vagrantfile</code> 文件。<br>box_name 可省略，省略后默认为 base。</p>
 </li>
 <li><p>添加VagrantBox</p>
 <ul>
-<li><code>在线添加</code>方式的语法：vagrant box add {Vagrant_project_name} {VagrantBox_url}</li>
-<li><code>本地添加</code>方式的语法：vagrant box add {Vagrant_project_name} {x:\..\VagrantBox_name} （推荐）<br>‘VagrantBox_url’ 为 VagrantBox 的“下载地址”，可在 <a href="http://www.vagrantbox.es" target="_blank" rel="external">http://www.vagrantbox.es</a> 查找复制<br>‘x:\..\VagrantBox_name’ 为本地路径 + VagrantBox 全称，若将 VagrantBox 拷贝到工程目录下则无需添加路径。</li>
-<li>添加成功后工程目录下新增 <code>.vagrant</code> 文件夹。</li>
+<li>在线添加方式<pre><code><span class="label">vagrant</span> <span class="keyword">box </span><span class="keyword">add </span>{<span class="keyword">box_name} </span>{VagrantBox_url}
+# VagrantBox_url 为 VagrantBox 的url下载地址，url可在 http://www.vagrantbox.es 查找复制
+</code></pre></li>
+<li>本地添加方式（推荐）<pre><code><span class="label">vagrant</span> <span class="keyword">box </span><span class="keyword">add </span>{<span class="keyword">box_name} </span>{path\VagrantBox_name}
+# path 本地路径 + VagrantBox 全称，若将 VagrantBox 拷贝到工程目录下则无需添加路径。
+</code></pre>添加成功后工程目录下新增 <code>.vagrant</code> 文件夹。</li>
 </ul>
 </li>
+<li><p>配置虚拟主机—vagrantfile</p>
+<ul>
+<li>box设置<pre><code>config<span class="class">.vm</span><span class="class">.box</span> = <span class="string">"Centos6.4"</span>
+</code></pre></li>
+<li>hostname设置<pre><code>config<span class="class">.vm</span><span class="class">.hostname</span> = <span class="string">"xxxx"</span>
+</code></pre></li>
+<li>虚拟主机网络设置<pre><code>config.vm.network <span class="string">"private_network"</span>, <span class="literal">ip</span>: <span class="string">"192.168.1.100"</span>   <span class="comment">#</span>
+config.vm.network <span class="string">"public_network"</span>  <span class="comment">#</span>
+</code></pre></li>
+<li>同步目录<pre><code>config<span class="class">.vm</span><span class="class">.synced_folder</span> <span class="string">"../data"</span>, <span class="string">"/vagrant_data"</span>
+</code></pre></li>
+<li>端口转发<pre><code>config<span class="class">.vm</span><span class="class">.network</span> <span class="string">"forwarded_port"</span>, guest: <span class="number">80</span>, host: <span class="number">8080</span>
+</code></pre></li>
+<li>GUI、内存和CPU<pre><code>config.vm.provider <span class="string">"virtualbox"</span> do |vb|
+   <span class="comment">#Display the VirtualBox GUI when booting the machine</span>
+   vb.<span class="variable">gui =</span> <span class="constant">true</span>
+   <span class="comment">#Customize the amount of memory on the VM:</span>
+   vb.<span class="variable">memory =</span> <span class="string">"1024"</span>
+   vb.<span class="variable">cpus =</span> <span class="number">2</span>
+   vb.<span class="variable">name =</span> <span class="string">"my_vm"</span>
+end
+</code></pre></li>
+</ul>
+</li>
+<li><p>开启虚拟主机</p>
+<pre><code><span class="title">vagrant</span> up
+</code></pre></li>
+<li><p>远程访问虚拟主机</p>
+<ul>
+<li>使用SSH工具访问虚拟主机，使用 $ vagrant ssh 命令查看远程访问所需的虚拟主机信息<pre><code>Host：127.0.0.1
+Port：2222
+Username：vagrant      <span class="special">#</span> Password：vagrant
+PrivateKey：..<span class="command">\.</span>vagrant<span class="command">\machines</span><span class="command">\default</span><span class="command">\virtualbox</span><span class="command">\ </span>private_key
+</code></pre></li>
+</ul>
+</li>
+<li><p>自定义虚拟主机环境</p>
+<ul>
+<li>如安装java、mysql、tomcat、subversion等</li>
+<li>如部署开发、测试环境等</li>
+</ul>
+</li>
+<li><p>打包自定义虚拟主机</p>
+<pre><code>vagrant package [options] [name]   # 打包命令
+   Options：
+     -<span class="ruby">-base <span class="constant">NAME</span> 默认是打包当前目录下面的虚拟主机。
+</span>     -<span class="ruby">-output <span class="constant">NAME</span> 打包成的box名称，不会自动添加.box后缀，要手动加。
+</span>     -<span class="ruby">-<span class="keyword">include</span> <span class="constant">FILE</span>… 打包时包含的文件名，可以把.box文件理解为一个压缩包。
+</span>     -<span class="ruby">-vagrantfile <span class="constant">FILE</span> 打包时包含有<span class="constant">Vagrantfile</span>文件，原理和上面类似。</span>
+</code></pre></li>
+<li><p>部署自定义虚拟主机<br>1) 在待部署的主机上安装 Vagrant 软件环境<br>2) 将打包 xxx.box 映像复制到待部署主机上<br>3) 在待部署的主机上使用 Vagrant 添加 xxxx.box<br>4) 执行 vagrant up启动虚拟主机（部署完成）</p>
+</li>
 </ol>
-<h4 id=""> </h4>
+<h4 id="Vagrant_常用命令汇总">Vagrant 常用命令汇总</h4><pre><code><span class="variable">$ </span>vagrant init        <span class="comment"># 初始化</span>
+<span class="variable">$ </span>vagrant box add     <span class="comment"># 添加VagrantBox映像</span>
+<span class="variable">$ </span>vagrant box list    <span class="comment"># 查看box列表</span>
+<span class="variable">$ </span>vagrant up          <span class="comment"># 启动虚拟机</span>
+<span class="variable">$ </span>vagrant reload      <span class="comment"># 重启虚拟机</span>
+<span class="variable">$ </span>vagrant halt        <span class="comment"># 关闭虚拟机</span>
+<span class="variable">$ </span>vagrant ssh         <span class="comment"># SSH 至虚拟机</span>
+<span class="variable">$ </span>vagrant status      <span class="comment"># 查看虚拟机运行状态</span>
+<span class="variable">$ </span>vagrant destroy     <span class="comment"># 销毁当前虚拟机</span>
+<span class="variable">$ </span>vagrant package     <span class="comment"># 打包虚拟主机</span>
+</code></pre><p> （完）</p>
+<h4 id="Thanks_for_you_reading"><p style="text-align: right; margin-right: 50px"> Thanks for you reading </p></h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/" data-id="cifqszrj2000riwo0suwr6e0n" class="article-share-link">Share</a>
+      <a data-url="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/" data-id="ciftb4ttn000r44o0288d7k52" class="article-share-link">Share</a>
       
         <a href="http://blog.hgping.com/2015/09/24/Vagrant入门基础实例应用/#disqus_thread" class="article-comment-link">Comments</a>
       
